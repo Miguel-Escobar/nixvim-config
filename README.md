@@ -8,12 +8,13 @@ Esto es una configuración básica de NixVim (una herramienta para tener instanc
 
 - Utilizar Quarto y Molten con Jupytext para tener una manera cómoda y extensible de editar Jupyter Notebooks, y archivos .qmd con código de Julia y Python.
 
-- Ser amigable para usar y de integrar de a poco en el día a día.
+- Ser amigable para usar y de integrar de a poco en el día a día, especialmente para usuarios nuevos.
 
+- Dado que uso un layout no tradicional de teclado, opté por dejar los keymaps casi todos por defecto. Pueden agregar siguiendo el formato del archivo [`config/keymaps.nix`](./config/keymaps.nix)
 
 ## Configurar
 
-Para ajustar la configuración es posible añadir archivos a la carpeta `./config`, o modificar los existentes. El lenguaje nix en este caso funciona más como un .json, y debería no ser difícil de seguir. La documentación está disponible en la página de nixvim.
+Para ajustar la configuración es posible añadir archivos a la carpeta `./config`, o modificar los existentes. El lenguaje nix en este caso funciona más como un .json, y debería no ser difícil de seguir. La documentación está disponible en la página de [nixvim](https://nix-community.github.io/nixvim/).
 
 Si añades un nuevo archivo recuerda incluirlo en el archivo de entrada de la configuración:
 [`config/default.nix`](./config/default.nix)

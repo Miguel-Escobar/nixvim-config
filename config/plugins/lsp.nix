@@ -1,37 +1,4 @@
 {pkgs, ...}: {
-    plugins.conform-nvim = {
-      enable = true;
-      settings = {
-        format_on_save = {
-          lsp_fallback = "fallback";
-          timeout_ms = 500;
-        };
-        notify_on_error = true;
-
-        formatters_by_ft = {
-          sh = [
-            "shellcheck"
-            "shfmt"
-          ];
-          python = [
-            "isort"
-            "ruff"
-          ];
-          css = ["prettier"];
-          html = ["prettier"];
-          json = ["prettier"];
-          lua = ["stylua"];
-          markdown = ["prettier"];
-          nix = ["alejandra"];
-          yaml = ["prettier"];
-        };
-      };
-    };
-
-    plugins.auto-save = {
-      enable = true;
-    };
-
     plugins.lsp = {
       enable = true;
       inlayHints = true;
@@ -98,23 +65,18 @@
 
     plugins.markview.enable = true;
     plugins.typst-vim.enable = true;
+
     plugins.vimtex = {
       enable = true;
       texlivePackage = pkgs.texlive.combined.scheme-full;
       settings = {
-        view_method = "zathura";
+        view_method = "zathura"; # Si tienen otro lector de pdf, debe estar explicitado acá.
       };
     };
     plugins.otter.enable = true;
     plugins.quarto.enable = true;
     plugins.molten.enable = true;
-    plugins.image.enable = true;
     plugins.jupytext.enable = true;
-    plugins.which-key.enable = true;
 
-    dependencies = {
-      tree-sitter.enable = true;
-      nodejs.enable = true;
-      gcc.enable = true;
-    };
+
 }

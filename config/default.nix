@@ -6,5 +6,6 @@
     ./themes/catppuccin.nix
     ./options.nix
     ./keymaps.nix
+    ./dependencies.nix
   ];
 }
