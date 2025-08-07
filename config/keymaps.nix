@@ -39,13 +39,13 @@
     }
     {
       key = "<Leader>fe";
-      action = "MiniFiles.open()";
+      action = "<cmd> lua MiniFiles.open() <CR>";
       mode = "n";
       options.desc = "Open Mini file editor";
     }
     {
       key = "<Leader>fmt";
-      action = "conform.format()";
+      action = "<cmd> lua conform.format() <CR>";
       mode = "n";
       options.desc = "Format file";
     }
