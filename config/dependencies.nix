@@ -4,7 +4,6 @@
     tree-sitter.enable = true;
     gcc.enable = true;
     nodejs.enable = true;
-    fd.enable = true;
 
     # Por si las moscas:
     coreutils.enable = true;

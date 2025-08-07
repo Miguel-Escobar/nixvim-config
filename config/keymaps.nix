@@ -1,12 +1,7 @@
 {...}: {
   globals.mapleader = " ";
   keymaps = [
-    {
-      key = "<Leader>y";
-      mode = "n";
-      action = "<cmd>Yazi cwd<cr>";
-      options.desc = "Open yazi at the current working directory";
-    }
+    
     {
       key = "<Leader>ff";
       action = "<cmd> Telescope find_files <CR>";
@@ -45,7 +40,7 @@
     }
     {
       key = "<Leader>fmt";
-      action = "<cmd> lua conform.format() <CR>";
+      action = ''<cmd> lua require("conform").format({ async = true, lsp_format = "fallback", range = range }) <CR>'';
       mode = "n";
       options.desc = "Format file";
     }
