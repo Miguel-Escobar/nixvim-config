@@ -1,7 +1,7 @@
-{...}: {
+{ ... }:
+{
   globals.mapleader = " ";
   keymaps = [
-    
     {
       key = "<Leader>ff";
       action = "<cmd> Telescope find_files <CR>";
