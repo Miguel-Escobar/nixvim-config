@@ -12,7 +12,7 @@
       autoindent = true;
       autowrite = true;
       confirm = true;
-      clipboard = "unnamedplus";
+      clipboard = "wl-copy";
       cursorline = false;
       list = true;
       expandtab = true;
