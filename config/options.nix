@@ -12,7 +12,9 @@
       autoindent = true;
       autowrite = true;
       confirm = true;
-      clipboard = "wl-copy";
+      clipboard = {
+        providers.wl-copy.enable = true;
+      };
       cursorline = false;
       list = true;
       expandtab = true;
