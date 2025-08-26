@@ -8,7 +8,7 @@
         snippets = {};
         surround = {};
         basics = {};
-        files = {}; # Permite ver y editar carpetas y archivos.
+        # files = {}; # Permite ver y editar carpetas y archivos.
         pairs = {};
         notify = {};
         completion = {};
