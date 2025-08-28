@@ -23,24 +23,35 @@
       perSystem = {system, ...}: let
         nixvimLib = nixvim.lib.${system};
         nixvim' = nixvim.legacyPackages.${system};
-        nixvimModule = {
-          inherit system; # or alternatively, set `pkgs`
-          module = import ./config; # import the module directly
-          # You can use `extraSpecialArgs` to pass additional arguments to your module files
+        amaru-nixvimModule = {
+          inherit system;
+          module = import ./config/amaru.nix;
           extraSpecialArgs = {
-            # inherit (inputs) foo;
+            # Esto permite meter cosas externas a nixvim en tu flake
           };
         };
-        nvim = nixvim'.makeNixvimWithModule nixvimModule;
+        miga-nixvimModule = {
+          inherit system;
+          module = import ./config/miga.nix;
+          extraSpecialArgs = {
+          };
+        };
+
+        # default-nvim = nixvim'.makeNixvimWithModule nixvimModule;
+        amaru-nvim = nixvim'.makeNixvimWithModule amaru-nixvimModule;
+        miga-nvim = nixvim'.makeNixvimWithModule miga-nixvimModule;
+
       in {
         checks = {
           # Run `nix flake check .` to verify that your config is not broken
-          default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
+          miga = nixvimLib.check.mkTestDerivationFromNixvimModule miga-nixvimModule;
+          amaru = nixvimLib.check.mkTestDerivationFromNixvimModule amaru-nixvimModule;
         };
 
         packages = {
           # Lets you run `nix run .` to start nixvim
-          default = nvim;
+          default = miga-nvim;
+          amaru = amaru-nvim;
         };
       };
     };
