@@ -25,7 +25,7 @@
       extensions = {
         file-browser.enable = true;
       };
-    }; 
+    };
 
     # Puede ser algo molesto al llamar a un formatter.
     auto-save = {
@@ -36,8 +36,7 @@
     conform-nvim = {
       enable = true;
       settings = {
-            notify_on_error = true;
-
+        notify_on_error = true;
         formatters_by_ft = {
           sh = [
             "shellcheck"
@@ -47,13 +46,13 @@
             "isort"
             "ruff"
           ];
-          css = ["prettier"];
-          html = ["prettier"];
-          json = ["prettier"];
-          lua = ["stylua"];
-          markdown = ["prettier"];
-          nix = ["alejandra"];
-          yaml = ["prettier"];
+          css = [ "prettier" ];
+          html = [ "prettier" ];
+          json = [ "prettier" ];
+          lua = [ "stylua" ];
+          markdown = [ "prettier" ];
+          nix = [ "alejandra" ];
+          yaml = [ "prettier" ];
         };
       };
     };
@@ -67,12 +66,12 @@
         ignore_install = [
           "latex"
         ];
-        highlight.disable = ["latex"];
+        highlight.disable = [ "latex" ];
       };
     };
 
     # Permite, en teoría, ver colores mejor en css
-    colorizer.settings = { 
+    colorizer.settings = {
       enable = true;
       filetypes = [
         "css"
