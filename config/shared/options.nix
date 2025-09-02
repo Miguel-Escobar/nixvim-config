@@ -1,8 +1,11 @@
 {
-  config = {
     viAlias = true;
     vimAlias = true;
-
+    diagnostic.settings = {
+      signs = false;
+      update_in_insert = true;
+      underline = true;
+    };
     opts = {
       updatetime = 100;
       number = true;
@@ -34,5 +37,4 @@
       undofile = true;
       undolevels = 10000;
     };
-  };
 }

@@ -83,16 +83,27 @@
     tiny-inline-diagnostic = {
       enable = true;
       settings = {
-        multilines = {
-          enabled = true;
+        hi = {
+          error = "DiagnosticError";
+          warn = "DiagnosticWarn";
+          info = "DiagnosticInfo";
+          hint = "DiagnosticHint";
+          arrow = "NonText";
+          background = "CursorLine";
+          mixing_color = "Normal";
         };
-        # options = {
-        #   use_icons_from_diagnostic = true;
-        # };
+
         preset = "amongus"; # sus
-        enable_on_insert = true;
-        virt_texts = {
-          priority = 2048;
+        options= {
+          multilines = {
+            enabled = true;
+          };
+          enable_on_insert = true;
+          throttle = 0;
+          show_all_diags_on_cursorline = true;
+          virt_texts = {
+            priority = 4096;
+          };
         };
       };
     };

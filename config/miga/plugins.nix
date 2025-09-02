@@ -7,7 +7,7 @@
   keymaps = [
     {
       key = "<Leader>ht";
-      action = "<cmd> Hardtime toggle <CR>";
+      action = "<cmd>Hardtime toggle<CR>";
       mode = "n";
       options.desc = "Hardtime: toggle";
     }

@@ -77,4 +77,5 @@
     plugins.quarto.enable = true;
     plugins.molten.enable = true;
     plugins.jupytext.enable = true;
+
 }
